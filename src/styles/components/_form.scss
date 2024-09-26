@@ -1,0 +1,14 @@
+.form {
+  border: 1px solid rgba($gray, 0.6);
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+
+  &Footer {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}

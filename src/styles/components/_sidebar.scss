@@ -1,0 +1,57 @@
+.sidebar {
+  background-color: rgba($primary, 0.8);
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+
+  &List {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &Item {
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    &.active {
+      background-color: rgba($primary, 0.8);
+    }
+
+    > div {
+      display: none;
+
+      @media (min-width: $breakpoint-xs) {
+        display: block;
+      }
+    }
+  }
+
+  &Expand {
+    display: none;
+
+    @media (min-width: $breakpoint-xs) {
+      display: block;
+      cursor: pointer;
+      padding: 5px;
+      color: $white;
+      font-size: 20px;
+      line-height: 1rem;
+    }
+  }
+
+  &Icon {
+    font-size: 24px;
+    line-height: 1rem;
+  }
+}

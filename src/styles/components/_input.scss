@@ -1,0 +1,59 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .label {
+    font-weight: 500;
+  }
+
+  .input {
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 5px 10px;
+    min-height: 30px;
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  .textarea {
+    min-height: 100px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  .select {
+    height: 41px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}

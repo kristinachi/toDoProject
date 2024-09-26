@@ -1,0 +1,31 @@
+.header {
+  padding: 14px 0;
+  background-color: $white;
+  box-shadow: 0 3px 8px rgba($black, 0.1);
+  z-index: 2;
+
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &Text {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary;
+    font-family: $font-secondary;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

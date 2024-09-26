@@ -1,0 +1,156 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+}
+
+body {
+  min-width: 320px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $black;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+input {
+  border: 0;
+
+  &[type="text"],
+  &[type="password"],
+  &[type="email"],
+  &[type="search"] {
+    -webkit-appearance: none;
+  }
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background-color: unset;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+  -webkit-appearance: none;
+}
+
+.layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: $white;
+  overflow: hidden;
+
+  &Wrapper {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  &Main {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    min-height: 0;
+    background-color: #f0f2f5;
+    overflow: hidden;
+  }
+}
+
+.page {
+  width: 100%;
+  padding: 20px;
+  background-color: $white;
+  overflow: auto;
+
+  &Head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    h1 {
+      text-transform: capitalize;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, 0.5);
+}
+
+.noData {
+  text-align: center;
+  color: $gray;
+  padding: 50px 0 20px;
+
+  &Text {
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 20px;
+  }
+
+  &Icon {
+    font-size: 140px;
+  }
+}
