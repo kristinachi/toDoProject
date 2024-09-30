@@ -19,7 +19,7 @@ interface Note {
 interface FormModalProps {
   isOpen: boolean;
   onClose: () => void;
-  currentNote?: Note;
+  currentNote: Note | null;
 }
 
 const statuses = ["to do", "done", "in progress", "deleted"];

@@ -1,5 +1,14 @@
 import cx from "classnames";
 
+interface ButtonProps {
+  children: React.ReactNode;
+  type: "button" | "submit" | "reset";
+  className?: string;
+  variant?: "primary" | "secondary" | "link";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+}
+
 export default function Button(props: ButtonProps) {
   const {
     children,
@@ -35,13 +44,4 @@ export default function Button(props: ButtonProps) {
       {children}
     </button>
   );
-}
-
-interface ButtonProps {
-  children: React.ReactNode;
-  type: "button" | "submit" | "reset";
-  className?: string;
-  variant?: "primary" | "secondary" | "link";
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  disabled?: boolean;
 }

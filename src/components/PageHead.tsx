@@ -21,7 +21,7 @@ interface PageHeadProps {
 export default function PageHead({ title }: PageHeadProps) {
   const dispatch = useDispatch();
   const [isModalOpen, setModalOpen] = useState(false);
-  const [currentNote, setCurrentNote] = useState<Note | undefined>(undefined);
+  const [currentNote, setCurrentNote] = useState<Note | null>(null);
   const [isConfirmationOpen, setConfirmationOpen] = useState(false);
   const notes = useSelector((state: RootState) => state.notes.notes);
 
@@ -30,7 +30,7 @@ export default function PageHead({ title }: PageHeadProps) {
   ).length;
 
   const addNote = () => {
-    setCurrentNote(undefined);
+    setCurrentNote(null);
     setModalOpen(true);
   };
 

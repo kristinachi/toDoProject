@@ -1,4 +1,11 @@
 import { ChangeEvent } from "react";
+interface TextareaProps {
+  name: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void; // Corrected type
+  placeholder?: string;
+  required?: boolean;
+}
 
 export default function Textarea(props: TextareaProps) {
   const { name, value, onChange, placeholder, required = false } = props;
@@ -15,12 +22,4 @@ export default function Textarea(props: TextareaProps) {
       />
     </div>
   );
-}
-
-interface TextareaProps {
-  name: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void; // Corrected type
-  placeholder?: string;
-  required?: boolean;
 }

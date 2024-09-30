@@ -34,7 +34,7 @@ export default function NoteView({ statusFilter }: NoteViewProps) {
   const dispatch = useDispatch();
 
   const [isModalOpen, setModalOpen] = useState(false);
-  const [currentNote, setCurrentNote] = useState<Note | undefined>(undefined);
+  const [currentNote, setCurrentNote] = useState<Note | null>(null);
   const [isConfirmationOpen, setConfirmationOpen] = useState(false);
   const [noteToDelete, setNoteToDelete] = useState<number | null>(null);
 

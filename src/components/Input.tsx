@@ -1,5 +1,14 @@
 import { ChangeEvent } from "react";
 
+interface InputProps {
+  name: string;
+  type?: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  required?: boolean;
+}
+
 export default function Input(props: InputProps) {
   const { name, value, type, onChange, placeholder, required = false } = props;
 
@@ -16,13 +25,4 @@ export default function Input(props: InputProps) {
       />
     </div>
   );
-}
-
-interface InputProps {
-  name: string;
-  type?: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-  required?: boolean;
 }
